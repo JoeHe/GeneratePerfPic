@@ -74,6 +74,10 @@ def main():
         plt.grid(True)
         fig=plt.gcf()
         fig.set_size_inches(13, 13)
+        if values[-1] == 0:
+            xmin, xmax=plt.xlim()
+            xmax_new = xmax + bar_width*2
+            plt.xlim(xmax=xmax_new)
         plt.savefig(output, dpi=100)
     
     
